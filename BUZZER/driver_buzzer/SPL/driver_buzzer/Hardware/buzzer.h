@@ -3,7 +3,7 @@
 
 //引脚定义
 #define BUZZER_GPIO_PORT        GPIOA
-#define BUZZER_GPIO_PIN         GPIO_Pin_0
+#define BUZZER_GPIO_PIN         GPIO_Pin_11
 #define BUZZER_GPIO_CLK         RCC_APB2Periph_GPIOA
 
 //蜂鸣器控制宏定义

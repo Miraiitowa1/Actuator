@@ -1107,10 +1107,10 @@ Removing Unused input sections from the image.
     Removing oled.o(i.OLED_ShowSignedNum), (112 bytes).
     Removing oled.o(i.OLED_UpdateArea), (124 bytes).
     Removing oled.o(i.OLED_pnpoly), (140 bytes).
-    Removing buzzer.o(i.Buzzer_Init), (52 bytes).
+    Removing buzzer.o(i.Buzzer_Init), (56 bytes).
     Removing main.o(.data), (2 bytes).
 
-494 unused section(s) (total 23058 bytes) removed from the image.
+494 unused section(s) (total 23062 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1404,7 +1404,7 @@ Image Symbol Table
     i.SystemInit                             0x08000b28   Section        0  system_stm32f10x.o(i.SystemInit)
     i.UsageFault_Handler                     0x08000b88   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
     i.main                                   0x08000b8c   Section        0  main.o(i.main)
-    .constdata                               0x08000bd8   Section     2381  oled_data.o(.constdata)
+    .constdata                               0x08000bdc   Section     2381  oled_data.o(.constdata)
     .bss                                     0x20000000   Section     1024  oled.o(.bss)
     .bss                                     0x20000400   Section       96  libspace.o(.bss)
     HEAP                                     0x20000460   Section      512  startup_stm32f10x_md.o(HEAP)
@@ -1591,13 +1591,13 @@ Image Symbol Table
     SysTick_Handler                          0x08000b25   Thumb Code     2  stm32f10x_it.o(i.SysTick_Handler)
     SystemInit                               0x08000b29   Thumb Code    78  system_stm32f10x.o(i.SystemInit)
     UsageFault_Handler                       0x08000b89   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
-    main                                     0x08000b8d   Thumb Code    50  main.o(i.main)
-    OLED_F8x16                               0x08000bd8   Data        1520  oled_data.o(.constdata)
-    OLED_F6x8                                0x080011c8   Data         570  oled_data.o(.constdata)
-    OLED_CF16x16                             0x08001402   Data         259  oled_data.o(.constdata)
-    Diode                                    0x08001505   Data          32  oled_data.o(.constdata)
-    Region$$Table$$Base                      0x08001528   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08001538   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x08000b8d   Thumb Code    54  main.o(i.main)
+    OLED_F8x16                               0x08000bdc   Data        1520  oled_data.o(.constdata)
+    OLED_F6x8                                0x080011cc   Data         570  oled_data.o(.constdata)
+    OLED_CF16x16                             0x08001406   Data         259  oled_data.o(.constdata)
+    Diode                                    0x08001509   Data          32  oled_data.o(.constdata)
+    Region$$Table$$Base                      0x0800152c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800153c   Number         0  anon$$obj.o(Region$$Table)
     OLED_DisplayBuf                          0x20000000   Data        1024  oled.o(.bss)
     __libspace_start                         0x20000400   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000460   Data           0  libspace.o(.bss)
@@ -1610,9 +1610,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00001538, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000153c, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001538, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x0000153c, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1709,13 +1709,13 @@ Memory Map of the image
     0x08000b26   0x08000b26   0x00000002   PAD
     0x08000b28   0x08000b28   0x00000060   Code   RO           27    i.SystemInit        system_stm32f10x.o
     0x08000b88   0x08000b88   0x00000004   Code   RO         3529    i.UsageFault_Handler  stm32f10x_it.o
-    0x08000b8c   0x08000b8c   0x0000004c   Code   RO         3493    i.main              main.o
-    0x08000bd8   0x08000bd8   0x0000094d   Data   RO         3466    .constdata          oled_data.o
-    0x08001525   0x08001525   0x00000003   PAD
-    0x08001528   0x08001528   0x00000010   Data   RO         4021    Region$$Table       anon$$obj.o
+    0x08000b8c   0x08000b8c   0x00000050   Code   RO         3493    i.main              main.o
+    0x08000bdc   0x08000bdc   0x0000094d   Data   RO         3466    .constdata          oled_data.o
+    0x08001529   0x08001529   0x00000003   PAD
+    0x0800152c   0x0800152c   0x00000010   Data   RO         4021    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001538, Size: 0x00000a60, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800153c, Size: 0x00000a60, Max: 0x00005000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1734,18 +1734,18 @@ Image component sizes
 
          0          0          0          0          0       4500   core_cm3.o
         70          0          0          0          0        914   delay.o
-        76         26          0          0          0        443   main.o
+        80         26          0          0          0        447   main.o
          0          0          0          0          0     201676   misc.o
-      1522         48          0          0       1024       9819   oled.o
-         0          0       2381          0          0       1058   oled_data.o
-        64         26        236          0       1536        816   startup_stm32f10x_md.o
-       296          0          0          0          0      11700   stm32f10x_gpio.o
-        26          0          0          0          0       3674   stm32f10x_it.o
-        32          6          0          0          0        529   stm32f10x_rcc.o
-       328         28          0          0          0      10125   system_stm32f10x.o
+      1522         48          0          0       1024       9851   oled.o
+         0          0       2381          0          0       1066   oled_data.o
+        64         26        236          0       1536        820   startup_stm32f10x_md.o
+       296          0          0          0          0      11716   stm32f10x_gpio.o
+        26          0          0          0          0       3694   stm32f10x_it.o
+        32          6          0          0          0        533   stm32f10x_rcc.o
+       328         28          0          0          0      10133   system_stm32f10x.o
 
     ----------------------------------------------------------------------
-      2418        134       2636          0       2560     245254   Object Totals
+      2422        134       2636          0       2560     245350   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          4          0          3          0          0          0   (incl. Padding)
 
@@ -1794,15 +1794,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      2796        150       2636          0       2656     243962   Grand Totals
-      2796        150       2636          0       2656     243962   ELF Image Totals
-      2796        150       2636          0          0          0   ROM Totals
+      2800        150       2636          0       2656     244058   Grand Totals
+      2800        150       2636          0       2656     244058   ELF Image Totals
+      2800        150       2636          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 5432 (   5.30kB)
+    Total RO  Size (Code + RO Data)                 5436 (   5.31kB)
     Total RW  Size (RW Data + ZI Data)              2656 (   2.59kB)
-    Total ROM Size (Code + RO Data + RW Data)       5432 (   5.30kB)
+    Total ROM Size (Code + RO Data + RW Data)       5436 (   5.31kB)
 
 ==============================================================================
 
